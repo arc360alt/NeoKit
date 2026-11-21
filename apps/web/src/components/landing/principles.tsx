@@ -10,19 +10,19 @@ const PRINCIPLES = [
 		icon: SecurityLockIcon,
 		title: "Privacy",
 		description:
-			"Your videos and photos stay on your device. Projects live in your browser's storage, and AI features run locally. No account required.",
+			"Your videos, photos and notes stay on your device. Projects live in your browser's storage, and AI features run locally. No account required.",
 	},
 	{
 		icon: GiftIcon,
 		title: "Free features",
 		description:
-			"Most basic editing features elsewhere are now paywalled. Timelines, layers, filters, captions and background removal are free here.",
+			"Most basic features elsewhere are now paywalled. Timelines, layers, captions, background removal and an AI assistant are free here.",
 	},
 	{
 		icon: CursorMagicSelection02Icon,
 		title: "Simple",
 		description:
-			"People want editors that are easy to use. Pick a size or drop in a clip, make your edit, and export. Nothing to install.",
+			"People want tools that are easy to use. Drop in a clip, a photo or a note and get going. Nothing to install.",
 	},
 ];
 
@@ -35,7 +35,7 @@ export function Principles() {
 						Why NeoKit?
 					</h2>
 					<p className="text-muted-foreground text-lg">
-						Two editors, one set of principles.
+						Three apps, one set of principles.
 					</p>
 				</div>
 				<div className="grid gap-10 md:grid-cols-3">

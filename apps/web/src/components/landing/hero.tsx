@@ -15,20 +15,20 @@ export function Hero() {
 			/>
 			<div className="mx-auto flex w-full max-w-3xl flex-col justify-center">
 				<h1 className="text-4xl font-bold tracking-tighter md:text-[4rem] md:leading-[1.05]">
-					The open source
+					Open source tools for
 					<br />
-					creative toolkit
+					creating and organising
 				</h1>
 
 				<p className="text-muted-foreground mx-auto mt-8 max-w-xl text-base font-light tracking-wide sm:text-xl">
-					Edit video and photos right in your browser. Private, free, and no
-					account needed.
+					Edit video and photos, then keep everything in order. All in your
+					browser. Private, free, and no account needed.
 				</p>
 			</div>
 
 			<div
 				id="apps"
-				className="mx-auto mt-14 grid w-full max-w-5xl scroll-mt-24 gap-6 text-left md:grid-cols-2"
+				className="mx-auto mt-14 grid w-full max-w-xl scroll-mt-24 gap-6 text-left lg:max-w-6xl lg:grid-cols-3"
 			>
 				{PRODUCTS.map((product) => (
 					<ProductCard key={product.id} product={product} />

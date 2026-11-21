@@ -8,13 +8,13 @@ import { PRODUCTS } from "@/site/products";
 export function OpenSource() {
 	return (
 		<section id="open-source" className="scroll-mt-16 border-t">
-			<div className="mx-auto flex max-w-3xl flex-col gap-10 px-6 py-24">
+			<div className="mx-auto flex max-w-4xl flex-col gap-10 px-6 py-24">
 				<div className="flex flex-col gap-4 text-center">
 					<h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-						Open source, MIT licensed
+						Free and open source
 					</h2>
 					<p className="text-muted-foreground mx-auto max-w-xl text-lg">
-						Every line of NeoKit is on GitHub. Both apps are built on{" "}
+						Every NeoKit app is on GitHub. NeoCut and NeoImage are built on{" "}
 						<Link
 							href="https://github.com/OpenCut-app/OpenCut"
 							target="_blank"
@@ -27,7 +27,7 @@ export function OpenSource() {
 					</p>
 				</div>
 
-				<div className="grid gap-4 sm:grid-cols-2">
+				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 					{PRODUCTS.map((product) => (
 						<div
 							key={product.id}

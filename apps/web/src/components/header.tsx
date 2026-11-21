@@ -16,6 +16,7 @@ import { SOCIAL_LINKS } from "@/site/social";
 const links = [
 	{ label: "NeoCut", href: "#neocut" },
 	{ label: "NeoImage", href: "#neoimage" },
+	{ label: "Scatter", href: "#scatter" },
 	{ label: "Why NeoKit", href: "#why" },
 	{ label: "Open source", href: "#open-source" },
 ];
@@ -39,7 +40,7 @@ export function Header() {
 						<span className="text-lg font-bold tracking-tight">NeoKit</span>
 					</Link>
 
-					<nav className="hidden items-center gap-4 md:flex">
+					<nav className="hidden items-center gap-4 lg:flex">
 						{links.map((link) => (
 							<a key={link.href} href={link.href}>
 								<Button variant="text" className="p-0 text-sm">
@@ -51,7 +52,7 @@ export function Header() {
 				</div>
 
 				<div className="relative z-10">
-					<div className="flex items-center gap-3 md:hidden">
+					<div className="flex items-center gap-3 lg:hidden">
 						<Button
 							variant="text"
 							size="icon"
@@ -62,7 +63,7 @@ export function Header() {
 							<HugeiconsIcon icon={Menu02Icon} size={30} />
 						</Button>
 					</div>
-					<div className="hidden items-center gap-3 md:flex">
+					<div className="hidden items-center gap-3 lg:flex">
 						<Link
 							href={SOCIAL_LINKS.github}
 							target="_blank"

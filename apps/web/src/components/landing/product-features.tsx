@@ -3,7 +3,13 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
+	AiChat02Icon,
 	AiMagicIcon,
+	CalendarCheckInIcon,
+	CloudSavingDoneIcon,
+	DashboardSquare02Icon,
+	Note01Icon,
+	PaintBrush04Icon,
 	ClosedCaptionIcon,
 	DashboardSpeed01Icon,
 	Download04Icon,
@@ -17,7 +23,7 @@ import {
 	WaveIcon,
 } from "@hugeicons/core-free-icons";
 import { Button } from "../ui/button";
-import { NEOCUT, NEOIMAGE, type Product } from "@/site/products";
+import { NEOCUT, NEOIMAGE, SCATTER, type Product } from "@/site/products";
 
 type Feature = {
 	icon: Parameters<typeof HugeiconsIcon>[0]["icon"];
@@ -103,11 +109,51 @@ const NEOIMAGE_FEATURES: Feature[] = [
 	},
 ];
 
+const SCATTER_FEATURES: Feature[] = [
+	{
+		icon: DashboardSquare02Icon,
+		title: "Freeform corkboard",
+		description:
+			"Scatter cards anywhere on an endless, draggable canvas. Link them with connectors, group them, and get around with the minimap.",
+	},
+	{
+		icon: Note01Icon,
+		title: "Notes that do more",
+		description:
+			"Markdown and HTML notes with clickable checkboxes, sticky notes, links, images and syntax-highlighted code cards.",
+	},
+	{
+		icon: CalendarCheckInIcon,
+		title: "Todos, kanban & dates",
+		description:
+			"Todo lists and kanban boards with due dates, plus calendar and timer cards to keep plans on track.",
+	},
+	{
+		icon: PaintBrush04Icon,
+		title: "Sketch it out",
+		description:
+			"Drawing cards with pen, highlighter, shapes, arrows and text on blank, grid, lined or dotted paper.",
+	},
+	{
+		icon: AiChat02Icon,
+		title: "Local AI assistant",
+		description:
+			"A small LLM runs entirely in your browser with WebGPU. It reads your cards and suggests new ones or changes that you review first.",
+	},
+	{
+		icon: CloudSavingDoneIcon,
+		title: "Local-first, sync if you want",
+		description:
+			"Multiple workspaces saved in your browser with no account. Optional cloud sync across devices, and export to PNG, PDF or Markdown.",
+	},
+];
+
 export function ProductFeatures() {
 	return (
 		<>
 			<ProductSection product={NEOCUT} features={NEOCUT_FEATURES} />
 			<ProductSection product={NEOIMAGE} features={NEOIMAGE_FEATURES} />
+			<ProductSection product={SCATTER} features={SCATTER_FEATURES} />
 		</>
 	);
 }

@@ -7,13 +7,23 @@ import { GithubIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Button } from "../ui/button";
 import type { Product } from "@/site/products";
+import { cn } from "@/utils/ui";
 import { Handlebars } from "./handlebars";
 import { CropBox } from "./crop-box";
+import { ScatterBoard } from "./scatter-board";
 
 export function ProductCard({ product }: { product: Product }) {
-	const Demo = product.id === "neocut" ? Handlebars : CropBox;
-	const hint =
-		product.id === "neocut" ? "Drag the handles to trim" : "Drag to crop";
+	const demo = {
+		neocut: {
+			node: <Handlebars>{product.kind}</Handlebars>,
+			hint: "Drag the handles to trim",
+		},
+		neoimage: {
+			node: <CropBox>{product.kind}</CropBox>,
+			hint: "Drag to crop",
+		},
+		scatter: { node: <ScatterBoard />, hint: "Drag the cards around" },
+	}[product.id];
 
 	return (
 		<div className="bg-background/70 flex flex-col overflow-hidden rounded-xl border backdrop-blur">
@@ -35,7 +45,14 @@ export function ProductCard({ product }: { product: Product }) {
 						</span>
 					</div>
 				</div>
-				<span className="bg-secondary border-secondary-border text-secondary-foreground rounded-full border px-2.5 py-0.5 text-xs font-medium">
+				<span
+					className={cn(
+						"rounded-full border px-2.5 py-0.5 text-xs font-medium whitespace-nowrap",
+						product.id === "scatter"
+							? "border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-400"
+							: "bg-secondary border-secondary-border text-secondary-foreground",
+					)}
+				>
 					{product.kind}
 				</span>
 			</div>
@@ -50,11 +67,15 @@ export function ProductCard({ product }: { product: Product }) {
 						backgroundSize: "24px 24px",
 					}}
 				/>
-				<div className="relative text-3xl font-bold tracking-tighter sm:text-4xl">
-					<Demo>{product.kind}</Demo>
-				</div>
-				<span className="text-muted-foreground absolute bottom-2 text-xs">
-					{hint}
+				{product.id === "scatter" ? (
+					demo.node
+				) : (
+					<div className="relative text-3xl font-bold tracking-tighter sm:text-4xl">
+						{demo.node}
+					</div>
+				)}
+				<span className="text-muted-foreground pointer-events-none absolute bottom-2 text-xs">
+					{demo.hint}
 				</span>
 			</div>
 
@@ -64,13 +85,13 @@ export function ProductCard({ product }: { product: Product }) {
 
 			<div className="flex flex-wrap gap-3 p-6">
 				<Link href={product.url}>
-					<Button size="lg" className="h-10 text-base">
+					<Button size="lg" className="h-10 px-4 text-base">
 						{product.cta}
 						<ArrowRight className="ml-0.5" />
 					</Button>
 				</Link>
 				<Link href={product.github} target="_blank" rel="noopener noreferrer">
-					<Button size="lg" variant="outline" className="h-10 text-base">
+					<Button size="lg" variant="outline" className="h-10 px-4 text-base">
 						<HugeiconsIcon icon={GithubIcon} />
 						Source
 					</Button>

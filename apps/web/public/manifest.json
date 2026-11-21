@@ -1,6 +1,6 @@
 {
 	"name": "NeoKit",
-	"description": "Open source creative tools that run in your browser: NeoCut for video and NeoImage for photos.",
+	"description": "Open source tools that run in your browser: NeoCut for video, NeoImage for photos and Scatter for organising.",
 	"display": "standalone",
 	"start_url": "/",
 	"icons": [

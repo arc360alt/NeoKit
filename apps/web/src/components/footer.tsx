@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa6";
 import { DEFAULT_LOGO_URL } from "@/site/brand";
 import { SOCIAL_LINKS } from "@/site/social";
-import { NEOCUT, NEOIMAGE } from "@/site/products";
+import { NEOCUT, NEOIMAGE, SCATTER } from "@/site/products";
 
 interface FooterLink {
 	label: string;
@@ -14,10 +14,12 @@ const links: Record<string, FooterLink[]> = {
 	Apps: [
 		{ label: "NeoCut", href: NEOCUT.url },
 		{ label: "NeoImage", href: NEOIMAGE.url },
+		{ label: "Scatter", href: SCATTER.url },
 	],
 	Source: [
 		{ label: "NeoCut on GitHub", href: NEOCUT.github },
 		{ label: "NeoImage on GitHub", href: NEOIMAGE.github },
+		{ label: "Scatter on GitHub", href: SCATTER.github },
 		{ label: "OpenCut", href: "https://github.com/OpenCut-app/OpenCut" },
 	],
 };
@@ -39,8 +41,8 @@ export function Footer() {
 							<span className="text-lg font-bold">NeoKit</span>
 						</div>
 						<p className="text-muted-foreground mb-5 text-sm md:text-left">
-							Privacy-first, open source tools for editing video and photos.
-							Right in your browser.
+							Privacy-first, open source tools for editing video and photos,
+							and keeping everything organised. Right in your browser.
 						</p>
 						<div className="flex justify-start gap-3">
 							<Link
@@ -80,7 +82,7 @@ export function Footer() {
 
 				<div className="flex flex-col items-start justify-between gap-4 pt-2 md:flex-row">
 					<div className="text-muted-foreground flex items-center gap-4 text-sm">
-						<span>© {new Date().getFullYear()} NeoKit. MIT licensed.</span>
+						<span>© {new Date().getFullYear()} NeoKit</span>
 					</div>
 				</div>
 			</div>

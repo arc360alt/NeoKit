@@ -1,5 +1,5 @@
 export type Product = {
-	id: "neocut" | "neoimage";
+	id: "neocut" | "neoimage" | "scatter";
 	name: string;
 	kind: string;
 	url: string;
@@ -38,7 +38,21 @@ export const PRODUCTS: Product[] = [
 			"Edit photos and design graphics with layers, filters, text and AI background removal. Fixed-size or infinite FreeForm canvases.",
 		cta: "Open NeoImage",
 	},
+	{
+		id: "scatter",
+		name: "Scatter",
+		kind: "Organisation",
+		url: "https://scatter.neokit.org",
+		host: "scatter.neokit.org",
+		logo: "/logos/products/scatter.svg",
+		github: "https://github.com/arc360alt/scatter",
+		tagline: "A freeform corkboard for everything you're juggling.",
+		description:
+			"Scatter notes, todo lists and kanban boards on one draggable canvas, with a local AI assistant that reads your cards and helps you plan.",
+		cta: "Open Scatter",
+	},
 ];
 
 export const NEOCUT = PRODUCTS[0];
 export const NEOIMAGE = PRODUCTS[1];
+export const SCATTER = PRODUCTS[2];
