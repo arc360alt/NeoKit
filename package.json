@@ -1,0 +1,25 @@
+{
+  "name": "neokit",
+  "packageManager": "bun@1.3.14",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build:web": "turbo run build --filter=@neokit/web",
+    "dev:web": "turbo run dev --filter=@neokit/web",
+    "start:web": "turbo run start --filter=@neokit/web",
+    "check-types:web": "turbo run check-types --filter=@neokit/web",
+    "format:web": "prettier apps/web/src --write",
+    "generate:icons": "bun apps/web/scripts/generate-icons.ts"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3",
+    "turbo": "^2.8.20",
+    "typescript": "^5.8.3"
+  },
+  "trustedDependencies": [
+    "@tailwindcss/oxide",
+    "sharp"
+  ]
+}

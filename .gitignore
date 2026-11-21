@@ -1,0 +1,7 @@
+node_modules
+.turbo
+.next/
+.env*
+!*.env.example
+next-env.d.ts
+*.tsbuildinfo
