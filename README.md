@@ -21,6 +21,8 @@ Set `NEXT_PUBLIC_SITE_URL` (see `apps/web/.env.example`) for canonical links. It
 
 ## Structure
 
-- `apps/web/src/app/page.tsx`: the landing page (the only page)
+- `apps/web/src/app/page.tsx`: the landing page
+- `apps/web/src/app/partners/page.tsx`: the Other Partners page (PleaseStudy, NyxIDE, LiquidDesktop & Lumen)
 - `apps/web/src/components/landing/`: hero, product cards, feature sections
 - `apps/web/src/site/products.ts`: names, URLs and repo links for every app
+- `apps/web/src/site/partners.ts`: the partner projects shown on `/partners`

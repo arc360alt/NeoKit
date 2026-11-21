@@ -14,11 +14,12 @@ import { DEFAULT_LOGO_URL } from "@/site/brand";
 import { SOCIAL_LINKS } from "@/site/social";
 
 const links = [
-	{ label: "NeoCut", href: "#neocut" },
-	{ label: "NeoImage", href: "#neoimage" },
-	{ label: "Scatter", href: "#scatter" },
-	{ label: "Why NeoKit", href: "#why" },
-	{ label: "Open source", href: "#open-source" },
+	{ label: "NeoCut", href: "/#neocut" },
+	{ label: "NeoImage", href: "/#neoimage" },
+	{ label: "Scatter", href: "/#scatter" },
+	{ label: "Why NeoKit", href: "/#why" },
+	{ label: "Open source", href: "/#open-source" },
+	{ label: "Partners", href: "/partners" },
 ];
 
 export function Header() {
@@ -42,11 +43,11 @@ export function Header() {
 
 					<nav className="hidden items-center gap-4 lg:flex">
 						{links.map((link) => (
-							<a key={link.href} href={link.href}>
+							<Link key={link.href} href={link.href}>
 								<Button variant="text" className="p-0 text-sm">
 									{link.label}
 								</Button>
-							</a>
+							</Link>
 						))}
 					</nav>
 				</div>
@@ -74,12 +75,12 @@ export function Header() {
 								GitHub
 							</Button>
 						</Link>
-						<a href="#apps">
+						<Link href="/#apps">
 							<Button className="text-sm">
 								Get started
 								<ArrowRight className="size-4" />
 							</Button>
-						</a>
+						</Link>
 						<ThemeToggle />
 					</div>
 				</div>
@@ -122,13 +123,13 @@ export function Header() {
 										ease: [0.25, 0.46, 0.45, 0.94],
 									}}
 								>
-									<a
+									<Link
 										href={link.href}
 										className="text-2xl font-semibold"
 										onClick={closeMenu}
 									>
 										{link.label}
-									</a>
+									</Link>
 								</motion.div>
 							))}
 						</nav>

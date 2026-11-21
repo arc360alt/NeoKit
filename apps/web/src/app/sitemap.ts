@@ -2,5 +2,8 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/site/brand";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	return [{ url: SITE_URL, changeFrequency: "monthly", priority: 1 }];
+	return [
+		{ url: SITE_URL, changeFrequency: "monthly", priority: 1 },
+		{ url: `${SITE_URL}/partners`, changeFrequency: "monthly", priority: 0.6 },
+	];
 }

@@ -68,6 +68,16 @@ export function OpenSource() {
 						</div>
 					))}
 				</div>
+
+				<p className="text-muted-foreground text-center text-sm">
+					Looking for PleaseStudy, NyxIDE, LiquidDesktop or Lumen?{" "}
+					<Link
+						href="/partners"
+						className="text-foreground underline underline-offset-4"
+					>
+						See Other Partners
+					</Link>
+				</p>
 			</div>
 		</section>
 	);

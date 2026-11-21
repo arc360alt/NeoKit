@@ -15,6 +15,7 @@ const links: Record<string, FooterLink[]> = {
 		{ label: "NeoCut", href: NEOCUT.url },
 		{ label: "NeoImage", href: NEOIMAGE.url },
 		{ label: "Scatter", href: SCATTER.url },
+		{ label: "Other Partners", href: "/partners" },
 	],
 	Source: [
 		{ label: "NeoCut on GitHub", href: NEOCUT.github },
@@ -67,8 +68,10 @@ export function Footer() {
 											<Link
 												href={link.href}
 												className="text-muted-foreground hover:text-foreground transition-colors"
-												target="_blank"
-												rel="noopener noreferrer"
+												{...(link.href.startsWith("http") && {
+													target: "_blank",
+													rel: "noopener noreferrer",
+												})}
 											>
 												{link.label}
 											</Link>
